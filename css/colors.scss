@@ -1,0 +1,73 @@
+
+/* Déclinaisons couleurs charte Made with Geenes | geenes.app  */
+/*Main, accent et les variantes hover doivent avoir un contraste suffisant avec le blanc -> sinon, adapter les styles des liens et des boutons*/
+
+$colors: (
+    'main': #13547a, 
+	//'main-hover' : scale-color(#54BBAB,$lightness: -30%, $saturation: 10%),
+	'main-hover' : scale-color(#13547a,$lightness: 30%),
+
+	
+	'accent': #f4d706, 
+	'accent-hover' : scale-color(#f4d706,$lightness: -10%,$saturation: 10%),
+
+	
+	'light-grey': #ecf5f6, 
+    'dark-grey' : #828d8b,
+    'grey' : #d1d1d1,
+
+    'white' : #fff,
+    'black'  : #3D3D3D,
+);
+
+:root{
+	
+
+	@each $name, $color in $colors {
+		--#{$name}: $color;
+    
+	}
+	
+	--main-transparent : scale-color(#13547a, $alpha: -40%);
+	--accent-transparent : scale-color(#f4d706, $alpha: -40%);
+	--grey-transparent : scale-color(#828d8b, $alpha: -40%);
+	--gradient : linear-gradient(15deg,var(--main) 0%,var(--main-hover) 100%);
+
+}
+
+@each $name, $color in $colors {
+
+    .has-#{$name}-color {
+        color: $color;
+    }
+
+    .has-#{$name}-background-color {
+        background-color: $color;
+    }
+    a.has-#{$name}-background-color {
+        border:solid 1px $color;
+        &:focus, &:hover {
+            background-color:transparent;
+            color:$color;
+            border-color:$color;
+        }
+    }
+
+/*
+    .wp-block-button.inverse a.has-#{$name}-color  {
+        border:solid 1px $color;
+        &:focus, &:hover {
+            background-color:$color;
+            color:#fff;
+            border-color:$color;
+        }
+    }
+*/
+    .border-#{$name} {
+        border-color:$color;
+    }
+
+}
+
+
+
