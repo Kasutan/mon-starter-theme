@@ -1333,6 +1333,16 @@ textarea {
 		margin-bottom:0;
 	}
 }
+.site-branding {
+	text-align: center;
+}
+a.custom-logo-link {
+	display: inline-block;
+}
+.custom-logo {
+	max-width:200px;
+	margin:0.5rem auto;
+}
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
@@ -1401,11 +1411,6 @@ embed,
 iframe,
 object {
 	max-width: 100%;
-}
-
-/* Make sure logo link wraps around logo image. */
-.custom-logo-link {
-	display: inline-block;
 }
 
 
