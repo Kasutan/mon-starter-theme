@@ -423,14 +423,9 @@ template {
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
+
+
 /* Containers */
-
-.full-container, .alignfull {
-	max-width: 100%;
-	padding: 0;
-	margin-bottom:var(--section-margin-bottom);
-}
-
 .container,
 .alignwide,
 .small-container,
@@ -440,13 +435,6 @@ template {
 	/*margin-left: auto;
 	margin-right: auto;*/
 	margin: 0 auto var(--section-margin-bottom);
-}
-
-.bleed-container {
-	width: 100vw;
-	margin-left: 50%;
-	transform: translateX(-50%);
-	margin-bottom:var(--section-margin-bottom);
 }
 
 .small-container {
@@ -459,6 +447,54 @@ template {
 
 .content-section {
 	margin-bottom:var(--section-margin-bottom);
+}
+
+.full-container, .alignfull {
+	padding: 0;
+	max-width: calc(100% + 2rem); /*compenser le padding de primary*/
+	margin: 0 -1rem var(--section-margin-bottom); 
+}
+
+.bleed-container {
+	width: 100vw;
+	margin-left: 50%;
+	padding: 0;
+	transform: translateX(-50%);
+	margin-bottom:var(--section-margin-bottom);
+}
+
+/* Site content */
+.site-content {
+	max-width:1800px;
+	margin:0 auto;
+}
+
+#primary, #secondary {
+	padding : 0 1rem;
+}
+
+/* Sidebar */
+@media screen and (min-width:1200px) {
+	.single .site-content, .page-template-page-sidebar .site-content  {
+			display:flex;
+	}
+	#primary {
+		flex-grow:1;
+	}
+	#secondary {
+		flex-basis:350px;
+		flex-shrink:0;
+		margin-left:2rem;
+	}
+	
+	/*Empêcher le container bleed de déborder sur la sidebar*/
+	.single .bleed-container, .page-template-page-sidebar .bleed-container {
+		width:unset;
+		transform:unset;
+			max-width: calc(100% + 2rem); /*compenser le padding de primary*/
+	   margin: 0 -1rem var(--section-margin-bottom); 
+	}
+	
 }
 
 
