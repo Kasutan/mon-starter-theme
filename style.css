@@ -51,8 +51,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--radius: 3px;
 	--shadow: 1px 1px 1px var(--grey);
 	--padding-lien:.75rem 1.25rem;
+	--section-margin-bottom:2rem;
 }
 
+@media screen and (min-width:600px) {
+	:root {
+		--section-margin-bottom:4rem;
+	}
+}
 
 /*--------------------------------------------------------------
 # Normalize
@@ -163,13 +169,7 @@ samp {
 	/* 2 */
 }
 
-/**
- * Add the correct font size in all browsers.
- */
 
-small {
-	font-size: 80%;
-}
 
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
@@ -425,18 +425,28 @@ template {
 --------------------------------------------------------------*/
 /* Containers */
 
-.full-container {
+.full-container, .alignfull {
 	max-width: 100%;
-	padding: 0 1rem;
+	padding: 0;
+	margin-bottom:var(--section-margin-bottom);
 }
 
 .container,
+.alignwide,
 .small-container,
 .medium-container {
 	max-width: 1200px;
 	padding: 0 1rem;
-	margin-left: auto;
-	margin-right: auto;
+	/*margin-left: auto;
+	margin-right: auto;*/
+	margin: 0 auto var(--section-margin-bottom);
+}
+
+.bleed-container {
+	width: 100vw;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	margin-bottom:var(--section-margin-bottom);
 }
 
 .small-container {
@@ -448,15 +458,9 @@ template {
 }
 
 .content-section {
-	padding: 30px 0;
+	margin-bottom:var(--section-margin-bottom);
 }
 
-
-@media (min-width: 600px) {
-	.content-section {
-		padding: 60px 0;
-	}
-}
 
 /* Grid */
 
@@ -627,7 +631,7 @@ template {
 }
 
 .margin-bottom {
-	margin-bottom: 2rem;
+	margin-bottom:var(--section-margin-bottom);
 }
 
 .alternate-background {
@@ -793,7 +797,15 @@ ins {
 	text-decoration: none;
 }
 
-big {
+small, .has-small-font-size  {
+	font-size: 80%;
+}
+
+.has-regular-font-size {
+	font-size: 1rem;
+}
+
+big, .has-big-font-size  {
 	font-size: 125%;
 }
 

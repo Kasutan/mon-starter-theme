@@ -79,9 +79,53 @@ if ( ! function_exists( 'kasutan_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+		/**
+		* Font sizes in editor
+		* https://www.billerickson.net/building-a-gutenberg-website/#editor-font-sizes
+		*/
+		add_theme_support( 'editor-font-sizes', array(
+			array(
+				'name' => __( 'Petite', 'themeLangDomain' ),
+				'size' => 13,
+				'slug' => 'small'
+			),
+			array(
+				'name' => __( 'Normale', 'themeLangDomain' ),
+				'size' => 16,
+				'slug' => 'normal'
+			),
+			array(
+				'name' => __( 'Grande', 'themeLangDomain' ),
+				'size' => 20,
+				'slug' => 'big'
+			),
+		) );
+		add_theme_support( 'disable-custom-font-sizes' );
+
+		/**
+		* Editor styles
+		*/
+		add_theme_support( 'editor-styles' );
+		add_editor_style( '/css/editor-style.css' );
+
+		/**
+		* Responsive embeds
+		*/
+		add_theme_support( 'responsive-embeds' );
+
+		/**
+		* Wide/full alignment
+		*/
+		add_theme_support( 'align-wide' );
 	}
 endif;
 add_action( 'after_setup_theme', 'kasutan_setup' );
+
+/**
+* Register color palette for Gutenberg editor.
+*/
+require get_template_directory() . '/inc/colors.php';
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -145,14 +189,6 @@ function kasutan_scripts() {
 add_action( 'wp_enqueue_scripts', 'kasutan_scripts' );
 
 /**
-* Enqueue editor styles.
-*/
-function kasutan_editor_styles() {
-	wp_enqueue_style( 'kasutan-editor-styles', get_theme_file_uri( '/css/style-editor.css' ), false, '1.0', 'all' );
-}
-add_action( 'enqueue_block_editor_assets', 'kasutan_editor_styles' );
-
-/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
@@ -178,8 +214,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
-/**
-* Register color palette for Gutenberg editor.
-*/
-require get_template_directory() . '/inc/colors.php';
