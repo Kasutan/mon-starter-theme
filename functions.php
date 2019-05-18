@@ -172,3 +172,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+* Register color palette for Gutenberg editor.
+*/
+require get_template_directory() . '/inc/colors.php';
