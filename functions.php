@@ -132,6 +132,7 @@ add_action( 'widgets_init', 'kasutan_widgets_init' );
 function kasutan_scripts() {
     wp_enqueue_style( 'kasutan-style-colors',get_template_directory_uri() . '/css/colors.min.css' );
 	wp_enqueue_style( 'kasutan-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'kasutan-google-font', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,700,600italic,700italic');
 
 	wp_enqueue_script( 'kasutan-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -142,6 +143,7 @@ function kasutan_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'kasutan_scripts' );
+
 
 /**
  * Implement the Custom Header feature.

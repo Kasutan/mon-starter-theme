@@ -46,8 +46,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Variables
 --------------------------------------------------------------*/
 :root {
-	--text-font: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
-	--title-font: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+	--text-font: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	--title-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	--radius: 3px;
 	--shadow: 1px 1px 1px var(--grey);
 	--padding-lien:.75rem 1.25rem;
@@ -671,10 +671,8 @@ h4,
 h5 {
 	clear: both;
 	font-family: var(--title-font);
-
 	margin: 1.5rem 0;
 	font-weight: 600;
-	font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
 	line-height: 1.2;
 	color: #404040;
 	color: var(--black);
