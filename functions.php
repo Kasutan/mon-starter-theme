@@ -144,6 +144,13 @@ function kasutan_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'kasutan_scripts' );
 
+/**
+* Enqueue editor styles.
+*/
+function kasutan_editor_styles() {
+	wp_enqueue_style( 'kasutan-editor-styles', get_theme_file_uri( '/css/style-editor.css' ), false, '1.0', 'all' );
+}
+add_action( 'enqueue_block_editor_assets', 'kasutan_editor_styles' );
 
 /**
  * Implement the Custom Header feature.

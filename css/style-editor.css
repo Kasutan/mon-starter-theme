@@ -1,0 +1,18 @@
+.editor-styles-wrapper .wp-block {
+	border:solid 1px lightblue;
+    width: 100%;
+	max-width: unset;
+	margin-bottom:1rem;
+}
+
+.editor-styles-wrapper .wp-block[data-type="core/group"] {
+	border: solid 2px darkblue;
+}
+
+.editor-styles-wrapper .wp-block.is-selected {
+	border-color:transparent;
+}
+
+.edit-post-visual-editor .editor-block-list__block .editor-block-list__block-edit {
+    padding:0 !important;
+}
