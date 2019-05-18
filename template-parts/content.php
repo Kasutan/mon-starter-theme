@@ -33,21 +33,12 @@
 
 	<div class="entry-content">
 		<?php
-		the_content( sprintf(
-			wp_kses(
-				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'kasutan' ),
-				array(
-					'span' => array(
-						'class' => array(),
-					),
-				)
-			),
-			get_the_title()
-		) );
+		the_content(
+			kpll__('Lire la suite').' <span class="screen-reader-text">'.get_the_title().'</span>'
+		);
 
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'kasutan' ),
+			'before' => '<div class="page-links">' . kpll__( 'Pages&nbsp;:' ),
 			'after'  => '</div>',
 		) );
 		?>

@@ -44,7 +44,7 @@ if ( ! function_exists( 'kasutan_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'kasutan' ),
+			'menu-1' => esc_html__( 'Menu principal', 'themeLangDomain' ),
 		) );
 
 		/*
@@ -149,9 +149,8 @@ add_action( 'after_setup_theme', 'kasutan_content_width', 0 );
  */
 function kasutan_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'kasutan' ),
+		'name'          => esc_html__( 'Barre latérale', 'themeLangDomain' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'kasutan' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -159,9 +158,9 @@ function kasutan_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Topbar', 'kasutan' ),
+		'name'          => esc_html__( 'Topbar', 'themeLangDomain' ),
 		'id'            => 'topbar',
-		'description'   => esc_html__( 'Add widgets here.', 'kasutan' ),
+		'description'   => esc_html__( 'Bandeau au dessus-de l\'en-tête', 'themeLangDomain' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<span class="widget-title">',
@@ -214,3 +213,10 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+* Prepare theme strings for translation with Polylang.
+*/
+
+require get_template_directory() . '/inc/polylang.php';
+
