@@ -158,9 +158,38 @@ function kasutan_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => esc_html__( 'Topbar', 'themeLangDomain' ),
+		'name'          => esc_html__( 'Bandeau en-tête', 'themeLangDomain' ),
 		'id'            => 'topbar',
-		'description'   => esc_html__( 'Bandeau au dessus-de l\'en-tête', 'themeLangDomain' ),
+		'description'   => esc_html__( 'Bandeau au-dessus-de l\'en-tête', 'themeLangDomain' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<span class="widget-title">',
+		'after_title'   => '</span>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Bandeau pied de page', 'themeLangDomain' ),
+		'id'            => 'topfooter',
+		'description'   => esc_html__( 'Bandeau au-dessus du pied de page', 'themeLangDomain' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<span class="widget-title">',
+		'after_title'   => '</span>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Pied de page', 'themeLangDomain' ),
+		'id'            => 'footer',
+		'description'   => esc_html__( 'Widgets principaux du pied de page', 'themeLangDomain' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s col md6 lg4">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Copyright', 'themeLangDomain' ),
+		'id'            => 'copyright',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<span class="widget-title">',
