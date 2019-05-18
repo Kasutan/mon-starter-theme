@@ -27,6 +27,14 @@ if ( function_exists('pll_register_string') ) {
 		'par',
 		'Lire la suite',
 		'Pages&nbsp;:',
+		'Aucun résultat',
+		"Désolé, aucun résultat n'a été trouvé. Voulez-vous essayer avec des mots-clés différents&nbsp;?",
+		"Voulez-vous essayer une recherche&nbsp;?",
+		"Cette page est introuvable.",
+		"Voulez-vous essayer une recherche&nbsp;?",
+		"Résultats de la recherche&nbsp;:",
+		'Rechercher',
+
 
 	];
 
