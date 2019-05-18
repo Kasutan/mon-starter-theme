@@ -24,10 +24,10 @@ if ( function_exists('pll_register_string') ) {
 		'Publié dans',
 		'Etiquetté',
 		'Publié le',
-		'Par',
+		'par',
 		'Lire la suite',
 		'Pages&nbsp;:',
-		
+
 	];
 
 	foreach ($register_strings as $string) {

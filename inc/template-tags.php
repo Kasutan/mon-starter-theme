@@ -37,7 +37,7 @@ if ( ! function_exists( 'kasutan_posted_by' ) ) :
 	 * Prints HTML with meta information for the current author.
 	 */
 	function kasutan_posted_by() {
-		$byline=kpll__('Par').' <span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';
+		$byline=' '.kpll__('par').' <span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';
 
 		echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
 
