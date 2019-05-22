@@ -249,3 +249,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 require get_template_directory() . '/inc/polylang.php';
 
+/**
+* Image sizes. Work first with medium and large in admin if possible
+* https://developer.wordpress.org/reference/functions/add_image_size/
+*/
+
+//add_image_size('banniere',1960,300,true);
