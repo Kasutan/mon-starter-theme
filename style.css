@@ -1429,6 +1429,11 @@ a.custom-logo-link {
 	padding:1rem;
 	margin:0.5rem;
 }
+
+.loop .post-thumbnail {
+	display: block;
+	text-align: center;
+}
 .loop .entry-content {
 	margin-bottom:1rem;
 }
