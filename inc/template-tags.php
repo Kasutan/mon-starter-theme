@@ -61,7 +61,7 @@ if ( ! function_exists( 'kasutan_entry_footer' ) ) :
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', ', ');
 			if ( $tags_list ) {
-				echo '<span class="tags-links">' . kpll__( 'Etiquetté') .' '. $tags_list. '</span>'; // WPCS: XSS OK.
+				echo ' <span class="tags-links">' . kpll__( 'Etiquetté') .' '. $tags_list. '</span>'; // WPCS: XSS OK.
 			}
 		}
 

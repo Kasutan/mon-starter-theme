@@ -26,6 +26,7 @@ get_header();
 				<header>
 					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
+				<section class="loop">
 				<?php
 			endif;
 
@@ -38,9 +39,15 @@ get_header();
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+				get_template_part( 'template-parts/content-loop', get_post_type() );
 
 			endwhile;
+
+			if ( is_home() && ! is_front_page() ) :
+				?>
+				</section>
+				<?php
+			endif;
 
 			the_posts_navigation();
 
