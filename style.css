@@ -1235,6 +1235,36 @@ textarea {
 
 
 /*--------------------------------------------------------------
+## Search form
+--------------------------------------------------------------*/
+
+.search-form {
+	align-items: center;
+}
+.search-form .search-field {
+	height: 30px;
+}
+.search-form .search-submit,
+.search-form .search-submit:hover,
+.search-form  .search-submit:focus,
+.search-form  .search-submit:active {
+	background-color:transparent;
+	background-image:url("icons/utility/search.svg"); /*Modifier la couleur du svg selon charte thème*/
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 60%;
+	border:none;
+	color:transparent;
+	margin-bottom: 0;
+	margin-left:0.5rem;
+	padding:0;
+	width:30px;
+	height:30px;
+	transition:none;
+}
+
+
+/*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
@@ -1350,27 +1380,6 @@ textarea {
 }
 .topbar ul li {
 	padding: var(--padding-lien);
-}
-
-.topbar .search-form {
-	display: flex;
-	align-items: center;
-}
-
-.topbar .search-submit {
-	/*icone de recherche : avec police d'icones ou image en background*/
-	border-color:#fff;
-	color:transparent;
-	margin-bottom: 0;
-	margin-left:0.5rem;
-	padding:0;
-	width:30px;
-	height:30px;
-}
-.topbar .search-submit:hover,
-.topbar .search-submit:focus,
-.topbar .search-submit:active {
-	background-color:transparent;
 }
 
 @media screen and (min-width:600px) {
