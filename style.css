@@ -466,7 +466,9 @@ template {
 /* Site content */
 .site-content {
 	max-width:1800px;
+	min-height:500px;
 	margin:0 auto;
+	padding-bottom:2rem;
 }
 
 #primary, #secondary {
@@ -1241,6 +1243,7 @@ textarea {
 
 .search-form {
 	align-items: center;
+	justify-content: flex-start;
 }
 .search-form .search-field {
 	height: 30px;
