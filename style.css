@@ -1460,6 +1460,27 @@ a.custom-logo-link {
 }
 
 /*--------------------------------------------------------------
+## Post single
+--------------------------------------------------------------*/
+.single .entry-content {
+	margin-bottom:2rem;
+}
+
+.single .entry-meta, .single .entry-footer {
+	font-style:italic;
+}
+
+.single article {
+	margin-bottom:2rem;
+	padding-bottom:1rem;
+	border-bottom:solid 1px var(--grey);
+}
+.single .post-navigation {
+	background-color:var(--light-grey);
+	padding:1rem;
+}
+
+/*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
 
