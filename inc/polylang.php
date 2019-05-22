@@ -34,6 +34,7 @@ if ( function_exists('pll_register_string') ) {
 		"Voulez-vous essayer une recherche&nbsp;?",
 		"Résultats de la recherche&nbsp;:",
 		'Rechercher',
+		"Retour en haut de page",
 
 
 	];

@@ -1495,13 +1495,34 @@ a.custom-logo-link {
 	padding:1rem 0;
 }
 
+
+
 .site-footer {
 	background-color:var(--main);
 	color:var(--white);
 	padding:2rem 0 1rem;
 }
+
+
+
 .site-footer a, .site-footer .widget-title {
 	color:var(--white);
+}
+.site-info {
+	position:relative;
+	
+}
+.back-to-top {
+	background-color:var(--light-grey);
+	position:absolute;
+	top:-100px;
+	right:1rem;
+	padding:0.9rem 0.8rem 0.6rem;
+	border-radius:50%;
+}
+.back-to-top:hover, .back-to-top:focus {
+	background-color:var(--grey);
+	
 }
 .site-info ul {
 	margin:0;
@@ -1541,6 +1562,8 @@ a.custom-logo-link {
 	padding:0.2rem 0.2rem 0;
 	margin:0;
 }
+
+
 
 /*--------------------------------------------------------------
 ## Posts and pages
