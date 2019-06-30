@@ -16,6 +16,7 @@
 		<div class="container flex no-margin-bottom ">
 			<?php dynamic_sidebar( 'topfooter' ); ?>
 		</div>
+		<?php get_template_part( 'template-parts/boutons-partage'); ?>
 	</div>
 	<footer id="colophon" class="site-footer">
 		
