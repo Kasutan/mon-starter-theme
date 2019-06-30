@@ -45,6 +45,15 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Variables
 --------------------------------------------------------------*/
+/*Local font*/
+/*
+@font-face {
+	font-family: 'ITC Bold';
+	src: url('fonts/itc-bold.otf');
+	font-display: swap;
+}*/
+
+
 :root {
 	--text-font: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	--title-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -59,6 +68,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 		--section-margin-bottom:4rem;
 	}
 }
+
+
 
 /*--------------------------------------------------------------
 # Normalize
