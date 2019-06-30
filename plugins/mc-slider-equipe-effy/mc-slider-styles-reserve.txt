@@ -1,0 +1,59 @@
+
+.slider {
+	padding:0 50px;
+}
+.siema {
+	text-align: center;
+	position:relative;
+}
+.siema button.dot {
+	color:transparent;
+	border-radius:50%;
+	height:20px;
+	width:20px;
+	padding:0;
+	background-color:#fff;
+	border:solid 2px var(--main);
+	margin:5px;
+}
+
+.siema button.dot:hover, .siema button.dot:focus,
+.siema button.dot.current {
+	color:transparent;
+	background-color:var(--main);
+}
+.siema >div {
+	display:flex;
+	margin-bottom:40px;
+}
+
+#siema-fleches button {
+	color:var(--main);
+	background-color:transparent;
+	padding:0;
+	border-radius:50%;
+	border-color:transparent;
+	font-size:2.5rem;
+	position:absolute;
+	left:-40px;
+	top:40%;
+	width:50px;
+	height:50px;
+	text-align: center;
+	line-height: 50px;
+}
+#siema-fleches button:before {
+	left:-15px;
+	position: relative;
+}
+#siema-fleches  button:hover, #siema-fleches button:focus {
+	background-color:#f7f7f7;
+}
+#siema-fleches button.droite {
+	left:unset;
+	right:-40px;
+}
+#siema-fleches button.droite:before {
+	left:15px;
+	position: relative;
+}
