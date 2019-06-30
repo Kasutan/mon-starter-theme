@@ -54,7 +54,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	--section-margin-bottom:2rem;
 }
 
-@media screen and (min-width:600px) {
+@media print, screen and (min-width:600px) {
 	:root {
 		--section-margin-bottom:4rem;
 	}
@@ -476,7 +476,7 @@ template {
 }
 
 /* Sidebar */
-@media screen and (min-width:1200px) {
+@media print, screen and (min-width:1200px) {
 	.single .site-content, .page-template-page-sidebar .site-content  {
 			display:flex;
 	}
@@ -519,7 +519,7 @@ template {
 	display: none;
 }
 
-@media screen and (min-width:600px) {
+@media print, screen and (min-width:600px) {
 	.col.md3 {
 		flex-basis: 25%;
 	}
@@ -541,7 +541,7 @@ template {
 	}
 }
 
-@media screen and (min-width:1000px) {
+@media print, screen and (min-width:1000px) {
 	.col.lg3 {
 		flex-basis: 25%;
 	}
@@ -1386,7 +1386,7 @@ textarea {
 	padding: var(--padding-lien);
 }
 
-@media screen and (min-width:600px) {
+@media print, screen and (min-width:600px) {
 	.topbar .container {
 	align-items: center;
 	justify-content: space-between;
@@ -1754,4 +1754,31 @@ margin:5px;
 		animation: none;
 		-webkit-animation: none;
 	}
+}
+
+/*--------------------------------------------------------------
+# Print
+--------------------------------------------------------------*/
+
+@media print {
+
+	.topbar,
+	.main-navigation,
+	.page-header,
+	.entry-header,
+	.topfooter,
+	.site-footer,
+	.fil-ariane,
+	.picto-flottant
+	{
+		display: none;
+	}
+
+	* {
+		position:unset !important;
+		background-color:transparent !important;
+		color:#000 !important;
+	}
+	
+	
 }
