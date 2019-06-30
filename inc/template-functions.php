@@ -44,6 +44,11 @@ function kasutan_get_picto_url($name) {
 	return get_template_directory_uri() . '/icons/utility/'.$name.'.svg';
 }
 
+function kasutan_get_picto_social_url($name) {
+	return get_template_directory_uri() . '/icons/social/'.$name.'.svg';
+}
+
+
 
 /**
 * Modify excerpt length and '[..]' read more string.
