@@ -258,3 +258,10 @@ require get_template_directory() . '/inc/polylang.php';
 */
 
 //add_image_size('banniere',1960,300,true);
+
+
+/**
+* Shortcodes
+*/
+
+require get_template_directory() . '/inc/shortcodes.php';
