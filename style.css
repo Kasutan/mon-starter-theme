@@ -1658,6 +1658,28 @@ object {
 }
 
 
+/*--------------------------------------------------------------
+# Boutons de partage 
+--------------------------------------------------------------*/
+.boutons-partage {
+	margin:1rem;
+	display:flex;
+}
+.icone-partage {
+background-color:var(--light-grey);
+width:30px;
+height:30px;
+display:flex;
+border-radius:50%;
+margin:5px;
+	align-items: center;
+	justify-content: center;
+}
+
+.icone-partage:hover, .icone-partage:focus {
+	background-color: var(--grey);
+}
+
 
 /*--------------------------------------------------------------
 # Animations
