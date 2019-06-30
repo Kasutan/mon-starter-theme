@@ -21,6 +21,7 @@ get_header();
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
+			<?php kasutan_fil_ariane(); ?>
 			<section class="loop">
 			<?php
 			/* Start the Loop */

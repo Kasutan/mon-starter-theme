@@ -103,3 +103,83 @@ if ( ! function_exists( 'kasutan_post_thumbnail' ) ) :
 		endif; // End is_singular().
 	}
 endif;
+
+
+
+if ( ! function_exists( 'kasutan_fil_ariane' ) ) :
+	/**
+	* Affiche le fil d'ariane.
+	*/
+	function kasutan_fil_ariane($tax='') {
+
+		//On n'affiche pas le fil d'ariane sur la page d'accueil
+		if(!is_front_page()) :
+			echo '<p class="fil-ariane medium-container no-margin-bottom">';
+
+			//Afficher le lien vers l'accueil
+			$accueil=get_option('page_on_front');
+			if(function_exists('pll_get_post')) :
+				$accueil=pll_get_post($accueil);
+			endif;
+			printf('<a href="%s">%s</a> > ',
+				get_the_permalink( $accueil),
+				get_the_title($accueil)
+			);
+
+			//Afficher le lien vers la page parente s'il y en a une
+			$current=get_post(get_the_ID());
+			$parent=$current->post_parent; // déjà traduit ?
+			if($parent) :
+				printf('<a href="%s">%s</a> > ',
+					get_the_permalink( $parent),
+					get_the_title($parent)
+				);
+			endif;
+			
+			/*Cas particuliers : à adapter selon les sites 
+
+			//Afficher la page des actualités pour les articles
+			if ( 'post' === get_post_type() ) :
+				//l'ID de la page est stockée dans les options ACF
+				$actus=kasutan_get_page_ID('page_actualites'); // ID traduit si besoin
+				if($actus) :
+					printf('<a href="%s">%s</a> > ',
+						get_the_permalink( $actus),
+						get_the_title($actus)
+					);
+				endif;
+			endif;
+			
+			if ( is_tax() ) :
+				$famille=get_queried_object();
+				$tax=$famille->taxonomy;
+				if('produits_conventionnels'==$tax) :
+					$page=kasutan_get_page_ID('page_produits_conventionnels');
+				elseif ('produits_bio'==$tax) :
+					$page=kasutan_get_page_ID('page_produits_bio');
+				endif;
+				if($page) :
+					printf('<a href="%s">%s</a> > ',
+					get_the_permalink( $page),
+					get_the_title($page)
+				);
+				endif;
+			endif;
+
+			*/
+
+			//Afficher le titre de la page courante
+			if(is_singular()):
+				the_title('<span class="current">','</span>'); 
+			elseif (is_tax()) : 
+				echo '<span class="current">'.single_term_title( '', false ).'</span>';
+			elseif (is_archive('')) :
+				the_archive_title('<span class="current">','</span>');
+			endif;
+
+			//Fermer la balise du fil d'ariane
+			echo '</p>';
+
+		endif;
+	}
+endif;

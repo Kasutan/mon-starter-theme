@@ -16,6 +16,8 @@
 
 	<?php kasutan_post_thumbnail(); ?>
 
+	<?php kasutan_fil_ariane(); ?>
+
 	<div class="entry-content">
 		<?php
 		the_content();
