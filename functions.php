@@ -265,3 +265,13 @@ require get_template_directory() . '/inc/polylang.php';
 */
 
 require get_template_directory() . '/inc/shortcodes.php';
+
+
+
+
+/**
+* Blocks
+*/
+
+//require get_template_directory() . '/blocks/k-groupe.php';
+
